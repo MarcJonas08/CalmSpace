@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmSpace</title>
+    <link rel= "stylesheet" href= "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Gabarito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- for main page-background -->
+    <div class="bg-imgs">
+        <div class="head">
+            <img src= "img/header.png">
+        </div>
+        <div class="center">
+            <img src= "img/girl-swing.svg">
+        </div>
+        <div class="foot">
+            <img src= "img/footer.svg">
+        </div>
+        <div class="foot-img">
+            <img src="img/bot-r.svg" id = "bot-r">
+            <img src="img/bot-l.svg" id = "bot-l">
+        </div>
+    </div>
+
+    <!--for navbar-->
+    <nav>
+        <h1>LOGO CalmSpace</h1>
+        <ul>
+            <a href = "asses.html"><li class = "nav-links">Assessments</li></a>
+            <a href = "exercise.html"><li class = "nav-links">Exercises</li></a>
+            <a href = "resource.html"><li class = "nav-links">Resource Hub</li></a>
+            <a href = "asses.html"><li class = "nav-links">Clinic</li></a>
+            <li id = "login">Log In</li>
+        </ul>
+        <div class="mob-nav" id = "mb-nav-open">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+        <div class="mb-nav-main" id = "mb-nav-main">
+            <div class="mb-nav-head" id = "mb-nav-close">
+                <ion-icon name="close"></ion-icon>
+            </div>
+            <ul>
+                <a href = "asses.html">
+                    <li class = "mb-nav-opt" id = "mb-nav-asses"><ion-icon name="document-text" class = "mb-nav-icon"></ion-icon> Assessments</li>
+                </a>
+                <a href = "exercise.html">
+                    <li class = "mb-nav-opt" id = "mb-nav-exercise"><ion-icon name="barbell" class = "mb-nav-icon"></ion-icon> Exercises</li>
+                </a>
+                <a href = "resource.html">
+                    <li class = "mb-nav-opt" id = "mb-nav-resource"><ion-icon name="cube" class = "mb-nav-icon"></ion-icon> Resource Hub</li>
+                </a>
+                <a href = "#">
+                    <li class = "mb-nav-opt" id = "mb-nav-clinic"><ion-icon name="medkit"></ion-icon> Clinic</li>
+                </a>
+                <a>
+                    <li class = "mb-nav-opt" id = "mb-nav-login"><ion-icon name="log-in"></ion-icon> Log in</li>
+                </a>
+            </ul>
+        </div>
+
+        <script>
+
+            const mb_nav_open = document.getElementById("mb-nav-open");
+            const mb_nav_close = document.getElementById("mb-nav-close");
+
+            const mb_nav_main = document.getElementById("mb-nav-main");
+
+            mb_nav_main.style.display = "none";
+
+            mb_nav_open.addEventListener('click', function(){
+                mb_nav_main.style.display = "flex";
+                document.body.style.overflow = "hidden";
+            });
+
+            mb_nav_close.addEventListener('click', function(){
+                mb_nav_main.style.display = "none";
+                document.body.style.overflow = "auto";
+            });
+
+            document.body.addEventListener('click', function(event) {
+                const isClickInside = mb_nav_main.contains(event.target) || mb_nav_open.contains(event.target);
+                if (!isClickInside) {
+                    mb_nav_main.style.display = "none";
+                    document.body.style.overflow = "auto";
+                }
+            });
+        </script>
+    </nav>
+
+    <!-- main page -->
+    <section class="main-sec">
+        <h1>Providing High Quality <br>Mental Health Care</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Eius rerum voluptate explicabo hic distinctio deleniti cum, 
+            ea ut minus accusamus minima? Quasi quibusdam dignissimos quae 
+            rerum explicabo animi incidunt magni!</p>
+        <p id = "register">Register now</p>
+    </section>
+
+    <!-- background blur for login/sign up -->
+    <section class = "bg-login" id = "bg-login">
+
+    </section>
+
+    <!-- log in -->
+    <div class="login-frm" id= "login-frm">
+        <h2>Login</h2><br>
+        <form action="" method="">
+            <div class="form-group">
+                <input type="text" id="username" name="username" required placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required placeholder="Password">
+            </div>
+            <div class="form-group" id = "form-group-a">
+                <a href="#">Forgot password</a>
+                <a href="#" id = "login-to-signup">Sign up</a>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="form-close" id = "login-close">
+            <ion-icon name="close"></ion-icon>
+        </div>
+    </div>
+
+    <!-- sign up -->
+    <div class="signup-frm" id= "signup-frm">
+        <h2>Sign Up</h2>
+        <form action="" method="">
+            <div class="form-group">
+                <input type="text" id="sgnUp-firstName" name="sgnUp-firstName" required placeholder="First Name">
+
+                <input type="text" id="sgnUp-lastName" name="sgnUp-lastName" required placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <input type="text" id="sgnUp-username" name="sgnUp-username" required placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="email" id="sgnUp-email" name="sgnUp-email" required placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="sgnUp-phoneNumber" name="sgnUp-phoneNumber" required placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <input type="password" id="sgnUp-password" name="sgnUp-password" required placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" id="sgnUp-confirmPassword" name="sgnUp-confirmPassword" required placeholder="Confirm Password">
+            </div>
+            <div class="form-group" id="form-group-rad">
+                <label for="gender">Gender</label>
+                <div class="radio-group">
+                    <div class="radio-cont">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    
+                    <div class="radio-cont">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="radio-cont">
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="form-close" id = "signup-close">
+            <ion-icon name="close"></ion-icon>
+        </div>
+
+        <script>
+
+            const bg_login = document.getElementById('bg-login'); //background for log in or sign up
+            const login_button = document.getElementById('login'); //log in button from navbar
+            const register_button = document.getElementById('register'); //sign up button from landing page
+            const login_frm = document.getElementById('login-frm'); //log in form
+            const signup_frm = document.getElementById('signup-frm'); //sign up form
+
+            //to open login form
+            login_button.addEventListener('click', function(){ 
+                bg_login.style.display = 'flex';
+                login_frm.style.display = 'flex';
+            });
+
+            //to open sign up form
+            register_button.addEventListener('click', function(){
+                bg_login.style.display = 'flex';
+                signup_frm.style.display = 'flex';
+            });
+
+            //to close login form
+            bg_login.addEventListener('click', function(){
+                bg_login.style.display = 'none';
+                login_frm.style.display = 'none';
+                signup_frm.style.display = 'none';
+            });
+
+            const mb_nav_login = document.getElementById("mb-nav-login");
+
+            mb_nav_login.addEventListener('click', function(){ 
+                mb_nav_main.style.display = "none";
+
+                bg_login.style.display = 'flex';
+                login_frm.style.display = 'flex';
+                
+            });
+
+            const login_to_signup = document.getElementById("login-to-signup"); 
+
+            login_to_signup.addEventListener('click', function(){ 
+                bg_login.style.display = 'flex';
+                login_frm.style.display = 'none';
+                signup_frm.style.display = 'flex';
+                
+            });
+
+            const login_close = document.getElementById("login-close");
+            const signup_close = document.getElementById("signup-close");
+
+            login_close.addEventListener('click', function(){ 
+                bg_login.style.display = 'none';
+                login_frm.style.display = 'none';
+                
+            });
+
+            signup_close.addEventListener('click', function(){ 
+                bg_login.style.display = 'none';
+                signup_frm.style.display = 'none';
+            });
+
+        </script>
+
+    </div>
+    
+    <script src="app.js"></script>
+    <!--bootsrap-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

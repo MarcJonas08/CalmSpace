@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resource.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Gabarito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-color">
+
+    </div>
+    <nav>
+        <div class="left-nav">
+            <a href = "asses.html"><h1>LOGO CalmSpace</h1></a>
+            <ul>
+                <a href = "asses.html"><li id = "asses">Assessments</li></a>
+                <a href = "exercise.html"><li id = "exercise">Exercises</li></a>
+                <a href = "resource.html"><li id = "resource">Resource Hub</li></a>
+            </ul>
+        </div>
+        <div class="right-nav">
+
+            <a href="#" class = "button">Clinic</a>
+            
+            <div class="r-n-icon" id = "schedule">
+                <a href = "#"><ion-icon name="calendar"></ion-icon></a>
+                <div class="nav-pop-up" id = "schedule-pop">
+                    <div class="pop-up-head">
+                        <p>Schedule</p>
+                    </div>
+                    <div class="pop-up-null">
+                        <ion-icon name="calendar-clear" class = "pop-up-icon"></ion-icon>
+                        <p>No schedule yet</p>
+                    </div>
+                    <div class="pop-up-main">
+
+                    </div>
+                    <div class="view-all">
+                        <a href = "#">View all schedule <ion-icon name="chevron-forward" class = "pop-up-go"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="r-n-icon" id = "notification">
+                <a href = "#"><ion-icon name="notifications"></ion-icon></a>
+                <div class="nav-pop-up" id = "notification-pop">
+                    <div class="pop-up-head">
+                        <p>Notification</p>
+                    </div>
+                    <div class="pop-up-null">
+                        <ion-icon name="notifications-off" class = "pop-up-icon"></ion-icon>
+                        <p>No notification yet</p>
+                    </div>
+                    <div class="pop-up-main">
+                        <!-- <div class="pop-up-sched"></div> --div for sched and notif-->
+                    </div>
+                    <div class="view-all">
+                        <a href = "#">View all notification <ion-icon name="chevron-forward" class = "pop-up-go"></ion-icon></a> 
+                    </div>
+                </div>
+            </div>
+            <div class="r-n-icon" id = "profile">
+                <a href = "#"><ion-icon name="person-circle"></ion-icon></a>
+                <div class="nav-pop-up" id = "profile-pop">
+                    <div class="profile-pop-up">
+                        <a href = "#" class= "profile-pop-up-opt">
+                            <ion-icon name="person-circle" class = "pop-up-profile"></ion-icon>
+                            <p>Profile</p>
+                        </a>
+                        <a href = "#" class= "profile-pop-up-opt">
+                            <ion-icon name="log-out"  class = "pop-up-profile"></ion-icon>
+                            <p>Log out</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+
+                const schedule = document.getElementById('schedule');
+                const schedule_pop = document.getElementById('schedule-pop');
+
+                const notification = document.getElementById('notification');
+                const notification_pop = document.getElementById('notification-pop');
+
+                const profile = document.getElementById('profile');
+                const profile_pop = document.getElementById('profile-pop');
+
+                schedule_pop.style.display = "none";
+                notification_pop.style.display = "none";
+                profile_pop.style.display = "none";
+
+                schedule.addEventListener('mouseover', function(){
+                    
+                    schedule_pop.style.display = "block";
+                });
+                schedule.addEventListener('mouseleave', function(){
+                    schedule_pop.style.display = "none";
+                });
+
+
+                notification.addEventListener('mouseover', function(){
+                    notification_pop.style.display = "block";
+                });
+                notification.addEventListener('mouseleave', function(){
+                    notification_pop.style.display = "none";
+                });
+
+                
+                profile.addEventListener('mouseover', function(){
+                    profile_pop.style.display = "block";
+                });
+                profile.addEventListener('mouseleave', function(){
+                    profile_pop.style.display = "none";
+                });
+
+            </script>
+            
+        </div>
+
+        <div class="mobile-nav">
+            
+            <div class="button">
+                <a href="#">Clinic</a>
+            </div>
+
+            <div class="r-n-icon" id = "mb-nav-open">
+                <a href="#"><ion-icon name="person-circle"></ion-icon></a>
+            </div>
+
+
+                <div class="mb-nav-main" id = "mb-nav-main">
+                    <div class="mb-nav-head" id = "mb-nav-close">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <ul>
+                        <a href = "asses.html">
+                            <li class = "mb-nav-opt" id = "mb-nav-asses"><ion-icon name="document-text" class = "mb-nav-icon"></ion-icon> Assessments</li>
+                        </a>
+                        <a href = "exercise.html">
+                            <li class = "mb-nav-opt" id = "mb-nav-exercise"><ion-icon name="barbell" class = "mb-nav-icon"></ion-icon> Exercises</li>
+                        </a>
+                        <a href = "resource.html">
+                            <li class = "mb-nav-opt" id = "mb-nav-resource"><ion-icon name="cube" class = "mb-nav-icon"></ion-icon> Resource Hub</li>
+                        </a>
+                        <a href = "#">
+                            <li class = "mb-nav-opt" id = "mb-nav-sched"><ion-icon name="calendar" class = "mb-nav-icon"></ion-icon> Schedule</li>
+                        </a>
+                        <a href = "#">
+                            <li class = "mb-nav-opt" id = "mb-nav-notif"><ion-icon name="notifications" class = "mb-nav-icon"></ion-icon> Notification</li>
+                        </a>
+                        <a href = "#">
+                            <li class = "mb-nav-opt" id = "mb-nav-profile"><ion-icon name="person" class = "mb-nav-icon"></ion-icon> Profile</li>
+                        </a>
+                        <a href = "index.html">
+                            <li class = "mb-nav-opt" id = "mb-nav-logout"><ion-icon name="log-out" class = "mb-nav-icon"></ion-icon> Log out</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <script>
+
+                    const mb_nav_open = document.getElementById("mb-nav-open");
+                    const mb_nav_close = document.getElementById("mb-nav-close");
+
+                    const mb_nav_main = document.getElementById("mb-nav-main");
+
+                    mb_nav_main.style.display = "none";
+
+                    mb_nav_open.addEventListener('click', function(){
+                        mb_nav_main.style.display = "flex";
+                        document.body.style.overflow = "hidden";
+                    });
+
+                    mb_nav_close.addEventListener('click', function(){
+                        mb_nav_main.style.display = "none";
+                        document.body.style.overflow = "auto";
+                    });
+
+                    document.body.addEventListener('click', function(event) {
+                        const isClickInside = mb_nav_main.contains(event.target) || mb_nav_open.contains(event.target);
+                        if (!isClickInside) {
+                            mb_nav_main.style.display = "none";
+                            document.body.style.overflow = "auto";
+                        }
+                    });
+                </script>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-cntxt">
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores minus ipsa consequatur molestiae fugiat dolor maxime quaerat, nemo, porro, ex ea nulla! Adipisci, impedit. Pariatur aut est cupiditate facilis.</p>
+        </div>
+    </div>
+
+    <div class="resource-main">
+        <!--search bar-->
+        <div class="search-bar">
+            <input type = "text"  name="search-bar" required placeholder="Search">
+            <a href = "#" class="srch-icon">
+                <ion-icon name="search"></ion-icon>
+            </a>
+        </div>
+        <!--filter-->
+        <div class="result-main-container">
+            <div class="result-filter">
+                <div class="filter-choice">
+                    <h3>Filter</h3>
+                </div>
+
+                <!--mobile filter options-->
+                <div class="filter-choice mobile">
+                    <h3>Filter</h3>
+                    <ion-icon name="chevron-down" id = "fltr-chc-open"></ion-icon>
+                    <ion-icon name="chevron-up" id = "fltr-chc-close"></ion-icon>
+                </div>
+
+                <a hrel = "#" class = "filter-opt mobile" id = "filterOpt-all-mb">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="albums"></ion-icon>
+                        <p class = "filter-opt-text">All</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+
+                <a hrel = "#" class = "filter-opt mobile" id = "filterOpt-article-mb">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="newspaper"></ion-icon>
+                        <p class = "filter-opt-text">Articles</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+
+                <a hrel = "#" class = "filter-opt mobile" id = "filterOpt-news-mb">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="globe"></ion-icon>
+                        <p class = "filter-opt-text">News</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+
+                <a hrel = "#" class = "filter-opt mobile" id = "filterOpt-video-mb">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="videocam"></ion-icon>
+                        <p class = "filter-opt-text">Videos</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+
+                <!--desktop filter options-->
+
+                <a hrel = "#" class = "filter-opt" id = "filterOpt-all">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="albums"></ion-icon>
+                        <p class = "filter-opt-text">All</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+                <a hrel = "#" class = "filter-opt" id = "filterOpt-article">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="newspaper"></ion-icon>
+                        <p class = "filter-opt-text">Articles</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                    
+                </a>
+                <a hrel = "#" class = "filter-opt" id = "filterOpt-news">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="globe"></ion-icon>
+                        <p class = "filter-opt-text">News</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+                <a hrel = "#" class = "filter-opt" id = "filterOpt-video">
+                    <div class="filter-opt-visual">
+                        <ion-icon name="videocam"></ion-icon>
+                        <p class = "filter-opt-text">Videos</p>
+                    </div>
+                    <p class = "filter-opt-count">12</p>
+                </a>
+
+                <!--script for filter options-->
+
+                <script>
+                    const filterOpen = document.getElementById("fltr-chc-open");
+                    const filterClose = document.getElementById("fltr-chc-close");
+                    const filterOption = document.getElementsByClassName("filter-opt mobile");
+
+                    
+                    filterOpen.addEventListener('click', function(){
+
+                        for (let i = 0; i < filterOption.length; i++) {
+                            filterOption[i].style.display = "flex";
+                            filterOpen.style.display = "none";
+                            filterClose.style.display = "flex";
+                        }
+
+                    });
+                    filterClose.addEventListener('click', function(){
+
+                        for (let i = 0; i < filterOption.length; i++) {
+                            filterOption[i].style.display = "none";
+                            filterOpen.style.display = "flex";
+                            filterClose.style.display = "none";
+                        }
+                    });
+
+                    window.addEventListener('resize', function(){
+                        let windowWidth = window.innerWidth;
+                        if (windowWidth >= 1020) {
+
+                            for (let i = 0; i < filterOption.length; i++) {
+                                filterOption[i].style.display = "none";
+                            }
+
+                            filterOpen.style.display = "flex";
+                            filterClose.style.display = "none";
+                        };
+                    });
+                    
+
+
+                    /*function handleDisplay() {
+                        let windowWidth = window.innerWidth;
+
+                        for (let i = 0; i < filterOption.length; i++) {
+
+                            if (windowWidth < 1020) {
+                                filterOption[i].style.display = "flex";
+                            } else {
+                                filterOption[i].style.display = "none";
+                            }
+                        }
+                        filterOpen.style.display = windowWidth < 1020 ? "none" : "flex";
+                        filterClose.style.display = windowWidth < 1020 ? "flex" : "none";
+                    }
+
+
+                    handleDisplay();
+                    window.addEventListener('resize', handleDisplay);
+                    filterOpen.addEventListener('click', handleDisplay);
+
+                    filterClose.addEventListener('click', function(){
+                        for (let i = 0; i < filterOption.length; i++) {
+                            filterOption[i].style.display = "none";
+                        }
+                        filterOpen.style.display = "flex";
+                        filterClose.style.display = "none";
+
+                    });*/
+
+
+                    //background colors
+
+                    const filterOpt_all = document.getElementById('filterOpt-all');
+                    const filterOpt_article = document.getElementById('filterOpt-article');
+                    const filterOpt_news = document.getElementById('filterOpt-news');
+                    const filterOpt_video = document.getElementById('filterOpt-video');
+
+                    filterOpt_all.style.backgroundColor = "lightgray";
+
+                    filterOpt_all.addEventListener('click', function(){
+
+                        filterOpt_all.style.backgroundColor = "lightgray";
+
+                        filterOpt_video.style.backgroundColor = "";
+                        filterOpt_article.style.backgroundColor = "";
+                        filterOpt_news.style.backgroundColor = "";
+
+                    });
+
+                    filterOpt_article.addEventListener('click', function(){
+
+                        filterOpt_article.style.backgroundColor = "lightgray";
+
+                        filterOpt_all.style.backgroundColor = "";
+                        filterOpt_news.style.backgroundColor = "";
+                        filterOpt_video.style.backgroundColor = "";
+                        
+                    });
+                    filterOpt_news.addEventListener('click', function(){
+
+                        filterOpt_news.style.backgroundColor = "lightgray";
+
+                        filterOpt_all.style.backgroundColor = "";
+                        filterOpt_article.style.backgroundColor = "";
+                        filterOpt_video.style.backgroundColor = "";
+
+                    });
+                    filterOpt_video.addEventListener('click', function(){
+
+                        filterOpt_video.style.backgroundColor = "lightgray";
+
+                        filterOpt_all.style.backgroundColor = "";
+                        filterOpt_article.style.backgroundColor = "";
+                        filterOpt_news.style.backgroundColor = "";
+
+                    });
+
+                    const filterOpt_all_mb = document.getElementById('filterOpt-all-mb');
+                    const filterOpt_article_mb = document.getElementById('filterOpt-article-mb');
+                    const filterOpt_news_mb = document.getElementById('filterOpt-news-mb');
+                    const filterOpt_video_mb = document.getElementById('filterOpt-video-mb');
+
+                    filterOpt_all_mb.style.backgroundColor = "lightgray";
+
+                    filterOpt_all_mb.addEventListener('click', function(){
+
+                        filterOpt_all_mb.style.backgroundColor = "lightgray";
+
+                        filterOpt_video_mb.style.backgroundColor = "";
+                        filterOpt_article_mb.style.backgroundColor = "";
+                        filterOpt_news_mb.style.backgroundColor = "";
+
+                    });
+
+                    filterOpt_article_mb.addEventListener('click', function(){
+
+                        filterOpt_article_mb.style.backgroundColor = "lightgray";
+
+                        filterOpt_all_mb.style.backgroundColor = "";
+                        filterOpt_news_mb.style.backgroundColor = "";
+                        filterOpt_video_mb.style.backgroundColor = "";
+                        
+                    });
+                    filterOpt_news_mb.addEventListener('click', function(){
+
+                        filterOpt_news_mb.style.backgroundColor = "lightgray";
+
+                        filterOpt_all_mb.style.backgroundColor = "";
+                        filterOpt_article_mb.style.backgroundColor = "";
+                        filterOpt_video_mb.style.backgroundColor = "";
+
+                    });
+                    filterOpt_video_mb.addEventListener('click', function(){
+
+                        filterOpt_video_mb.style.backgroundColor = "lightgray";
+
+                        filterOpt_all_mb.style.backgroundColor = "";
+                        filterOpt_article_mb.style.backgroundColor = "";
+                        filterOpt_news_mb.style.backgroundColor = "";
+
+                    });
+
+                </script>
+            </div>
+
+            <!--results/ list of results-->
+
+            <div class="result-container">
+                <div class="result-wrapper">
+                    <div class="result-img">
+                        <img src="img/try.png">
+                    </div>
+                    <div class="result-info">
+                        <h3>Lorem, ipsum.</h3>
+                        <p class = "result-type">Lorem, ipsum dolor.&nbsp;&nbsp;&nbsp;Video</p>
+                        <p class = "result-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ipsum nisi animi cum, dignissimos ut.</p>
+                        <a href = "#" class = "button">Let's go</a>  
+                    </div>
+                </div>
+                <div class="result-wrapper">
+                    <div class="result-img">
+                        <img src="img/try.png">
+                    </div>
+                    <div class="result-info">
+                        <h3>Lorem, ipsum.</h3>
+                        <p class = "result-type">Lorem, ipsum dolor.&nbsp;&nbsp;&nbsp;Video</p>
+                        <p class = "result-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ipsum nisi animi cum, dignissimos ut.</p>
+                        <a href = "#" class = "button">Let's go</a>  
+                    </div>
+                </div>
+                <div class="result-wrapper">
+                    <div class="result-img">
+                        <img src="img/try.png">
+                    </div>
+                    <div class="result-info">
+                        <h3>Lorem, ipsum.</h3>
+                        <p class = "result-type">Lorem, ipsum dolor.&nbsp;&nbsp;&nbsp;Video</p>
+                        <p class = "result-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ipsum nisi animi cum, dignissimos ut.</p>
+                        <a href = "#" class = "button">Let's go</a>  
+                    </div>
+                </div>
+                <div class="result-wrapper">
+                    <div class="result-img">
+                        <img src="img/try.png">
+                    </div>
+                    <div class="result-info">
+                        <h3>Lorem, ipsum.</h3>
+                        <p class = "result-type">Lorem, ipsum dolor.&nbsp;&nbsp;&nbsp;Video</p>
+                        <p class = "result-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ipsum nisi animi cum, dignissimos ut.</p>
+                        <a href = "#" class = "button">Let's go</a>  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--bootsrap-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
